@@ -7,10 +7,15 @@ This uses the build-in Vallox webserver to get and set properties of your HVAC.
 ## Nodes
 
 1. **get Profile**: Returns the current profile of the vallox unit.
+
 ![example: getProfile](./documentation/getProfile.jpg)
+
 2. **set Profile**: Sets the current vallox profile.
+
 ![example: setProfile](./documentation/setProfile.jpg)
+
 3. **get Temp**: Returns all current temperatures of the vallox unit.
+
 ![example: getTemp](./documentation/getTemp.jpg)
 
 ## ideas
