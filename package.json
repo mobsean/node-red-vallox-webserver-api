@@ -6,7 +6,7 @@
     "node": ">=14"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha \"test/**/*_spec.js\"",
     "validate": "node-red-dev validate"
   },
   "node-red": {
@@ -30,7 +30,7 @@
   "author": "mobsean",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mobsean/tbd"
+    "url": "https://github.com/mobsean/node-red-vallox-webserver-api"
   },
   "devDependencies": {
     "eslint": "^8.52.0",
@@ -39,6 +39,8 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-n": "^16.2.0",
     "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0",
+    "node-red": "^3.1.0",
     "node-red-dev": "^0.1.6",
     "node-red-node-test-helper": "^0.3.2"
   },
