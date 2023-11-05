@@ -1,0 +1,48 @@
+{
+  "name": "@mobsean/node-red-vallox-webserver-api",
+  "version": "1.0.0",
+  "description": "Connect your vallox HVAC unit with node-red over vallox webserver.",
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "node-red-dev validate"
+  },
+  "node-red": {
+    "version": ">=2.2.3",
+    "nodes": {
+      "valloxApi": "nodes/valloxApi.js",
+      "getTemp": "nodes/getTemp.js",
+      "getProfile": "nodes/getProfile.js",
+      "setProfile": "nodes/setProfile.js"
+    }
+  },
+  "keywords": [
+    "node-red",
+    "vallox",
+    "webserver",
+    "api",
+    "HVAC",
+    "ventilation unit",
+    "home automation"
+  ],
+  "author": "mobsean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mobsean/tbd"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "node-red-dev": "^0.1.6",
+    "node-red-node-test-helper": "^0.3.2"
+  },
+  "dependencies": {
+    "@danielbayerlein/vallox-api": "^1.0.1"
+  }
+}

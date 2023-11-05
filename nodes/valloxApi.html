@@ -1,0 +1,22 @@
+<script type="text/javascript">
+RED.nodes.registerType('valloxApi', {
+  category: 'config',
+  defaults: {
+    name: { value: '' },
+    ip: { value: '', required: true, validate: RED.validators.regex(/^((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}$/) }
+  },
+  label: function () {
+    return `http://${this.ip}/`
+  }
+})
+</script>
+
+<script type="text/html" data-template-name="valloxApi">
+    <b>Local Vallox Webserver:</b>
+    <p></p>
+    <div class="form-row">
+        <label for="node-config-input-ip"><i class="fa fa-server"></i> IP:</label>
+        <input type="text" id="node-config-input-ip" placeholder="192.168.0.100">
+    </div>
+   
+</script>

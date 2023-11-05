@@ -1,0 +1,78 @@
+<script type="text/javascript">
+RED.nodes.registerType('setProfile', {
+  category: 'Vallox Api',
+  color: '#ff7070',
+  defaults: {
+    name: { value: '' },
+    ip: { value: '', type: 'valloxApi' },
+    profile: { value: 'default' }
+  },
+  inputs: 1,
+  outputs: 1,
+  icon: 'file.svg',
+  label: function () {
+    return this.name || 'setProfile'
+  },
+  outputLabels: [
+    'current profile'
+  ],
+  inputLabels: [
+    'NONE, HOME, AWAY, BOOST, FIREPLACE, EXTRA'
+  ]
+})
+</script>
+
+<script type="text/html" data-template-name="setProfile">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name:</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-profile"><i class="fa fa-users"></i> setProfile:</label>
+    <select id="node-input-profile">
+      <option value="default">msg.payload</option>
+      <option value="NONE">None</option>
+      <option value="HOME">Home</option>
+      <option value="AWAY">Away</option>
+      <option value="BOOST">Boost</option>
+      <option value="FIREPLACE">Fireplace</option>
+      <option value="EXTRA">Extra</option>
+    </select> 
+  </div>
+    <b>Vallox Webserver:</b>
+    <p></p>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-server"></i> IP:</label>
+        <input type="text" id="node-input-ip">
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="setProfile">
+    <p>This node changes the current vallox profile.</p>
+    <dl>
+        <dt>setProfile:</dt>
+            <dd>This changes the behavior of the setProfile Node. Basically two different modes are possible:</dd>
+        <ol>
+            <li>
+                <dt>msg.payload</dt>
+                <dd>
+                    In this mode the incoming msg.payload is used to set the profile of the Vallox ventilating unit. 
+                </dd>
+            </li>
+            <li>
+                <dt>Choose a profile directly</dt>
+                    <dd>Set one of these to use a static profile on every incoming msg.payload.</dd>
+            </li>
+        </ol>
+    </dl>
+    <p><b>available profiles: </b></p>
+    <ul>
+        <li>NONE</li>
+        <li>HOME</li>
+        <li>AWAY</li>
+        <li>BOOST</li>
+        <li>FIREPLACE</li>
+        <li>EXTRA</li>
+    </ul>
+</script>
