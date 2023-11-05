@@ -2,15 +2,15 @@
 
 Integrate [Vallox](https://vallox.com/) ventilation units in your home automation project using [node-red](https://nodered.org).
 
-We are using the build-in Vallox webserver to get and set properties in your HVAC. 
+This uses the build-in Vallox webserver to get and set properties of your HVAC. 
 
 ## Nodes
 
-- **get Profile**: Returns the current profile of the vallox unit.
+1. **get Profile**: Returns the current profile of the vallox unit.
 ![example: getProfile](./documentation/getProfile.jpg)
-- **set Profile**: Sets the current vallox profile.
+2. **set Profile**: Sets the current vallox profile.
 ![example: setProfile](./documentation/setProfile.jpg)
-- **get Temp**: Returns all current temperatures of the vallox unit.
+3. **get Temp**: Returns all current temperatures of the vallox unit.
 ![example: getTemp](./documentation/getTemp.jpg)
 
 ## ideas
