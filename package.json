@@ -1,6 +1,6 @@
 {
   "name": "@mobsean/node-red-vallox-webserver-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Connect your vallox HVAC unit with node-red over vallox webserver.",
   "engines": {
     "node": ">=14"
