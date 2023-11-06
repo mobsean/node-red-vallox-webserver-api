@@ -1,0 +1,165 @@
+[
+    {
+        "id": "c3c85fc4de0cbaff",
+        "type": "tab",
+        "label": "example: getTemp",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3f877eb709955943",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "3b603a8121300855"
+            ]
+        ]
+    },
+    {
+        "id": "9a302ec4d51939f6",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "A_CYC_TEMP_SUPPLY_AIR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7ff707bb48b406fb",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "A_CYC_TEMP_SUPPLY_CELL_AIR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3b603a8121300855",
+        "type": "getTemp",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "ip": "8c91699b4732d13c",
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "9a302ec4d51939f6"
+            ],
+            [
+                "7ff707bb48b406fb"
+            ],
+            [
+                "ea1ab3edef41c973"
+            ],
+            [
+                "f1527c0ddc1a8bfc"
+            ],
+            [
+                "08c346fe0b3cca39"
+            ]
+        ]
+    },
+    {
+        "id": "ea1ab3edef41c973",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "A_CYC_TEMP_EXHAUST_AIR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f1527c0ddc1a8bfc",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "A_CYC_TEMP_OUTDOOR_AIR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "08c346fe0b3cca39",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "A_CYC_TEMP_EXTRACT_AIR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "03774e156ef9c416",
+        "type": "comment",
+        "z": "c3c85fc4de0cbaff",
+        "name": "simple getTemp",
+        "info": " 1. Set the IP Adress of your local Vallox Webserver.\n 2. press inject\n 3. open debug to read temperatures",
+        "x": 400,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8c91699b4732d13c",
+        "type": "valloxApi",
+        "ip": "192.168.0.10"
+    }
+]

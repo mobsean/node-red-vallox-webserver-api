@@ -1,0 +1,85 @@
+[
+    {
+        "id": "c3c85fc4de0cbaff",
+        "type": "tab",
+        "label": "example: getProfile",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3f877eb709955943",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "d6582f0b162b749c"
+            ]
+        ]
+    },
+    {
+        "id": "03774e156ef9c416",
+        "type": "comment",
+        "z": "c3c85fc4de0cbaff",
+        "name": "simple getProfile",
+        "info": " 1. Set the IP Adress of your local Vallox Webserver.\n 2. press inject\n 3. open debug to read current profile",
+        "x": 400,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d6582f0b162b749c",
+        "type": "getProfile",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "ip": "8c91699b4732d13c",
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "36c514055a114085"
+            ]
+        ]
+    },
+    {
+        "id": "36c514055a114085",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8c91699b4732d13c",
+        "type": "valloxApi",
+        "ip": "192.168.0.10"
+    }
+]
