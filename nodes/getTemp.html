@@ -1,0 +1,57 @@
+<script type="text/javascript">
+RED.nodes.registerType('getTemp', {
+  category: 'Vallox Api',
+  color: '#70c1ff',
+  defaults: {
+    name: { value: '' },
+    ip: { value: '', type: 'valloxApi' }
+  },
+  inputs: 1,
+  outputs: 5,
+  icon: 'file.svg',
+  label: function () {
+    return this.name || 'getTemp'
+  },
+  outputLabels: [
+    'A_CYC_TEMP_SUPPLY_AIR / Zuluft',
+    'A_CYC_TEMP_SUPPLY_CELL_AIR / Zuluft vom Wärmetauscher',
+    'A_CYC_TEMP_EXHAUST_AIR / Fortluft',
+    'A_CYC_TEMP_OUTDOOR_AIR / Außenluft',
+    'A_CYC_TEMP_EXTRACT_AIR / Abluft'
+  ]
+})
+</script>
+
+<script type="text/html" data-template-name="getTemp">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name:</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <b>Vallox Webserver:</b>
+    <p></p>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-server"></i> IP:</label>
+        <input type="text" id="node-input-ip">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="getTemp">
+    <p>Returns all current temperatures of the vallox unit. Every output is a different temperature.</p>
+    <ol>
+      <li>
+        A_CYC_TEMP_SUPPLY_AIR / Zuluft
+      </li>
+      <li>
+        A_CYC_TEMP_SUPPLY_CELL_AIR / Zuluft vom Wärmetauscher
+      </li>
+      <li>
+        A_CYC_TEMP_EXHAUST_AIR / Fortluft
+      </li>
+      <li>
+        A_CYC_TEMP_OUTDOOR_AIR / Außenluft
+      </li>
+      <li>
+        A_CYC_TEMP_EXTRACT_AIR / Abluft
+      </li>
+    </ol>
+</script>

@@ -1,0 +1,44 @@
+<script type="text/javascript">
+RED.nodes.registerType('getProfile', {
+  category: 'Vallox Api',
+  color: '#70c1ff',
+  defaults: {
+    name: { value: '' },
+    ip: { value: '', type: 'valloxApi' }
+  },
+  inputs: 1,
+  outputs: 1,
+  icon: 'file.svg',
+  label: function () {
+    return this.name || 'getProfile'
+  },
+  outputLabels: [
+    'Current Profile'
+  ]
+})
+</script>
+
+<script type="text/html" data-template-name="getProfile">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name:</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <b>Vallox Webserver:</b>
+    <p></p>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-server"></i> IP:</label>
+        <input type="text" id="node-input-ip" placeholder="192.168.0.100">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="getProfile">
+    <p>Returns the current profile of the vallox unit. One of these:</p>
+    <ol>
+        <li>NONE</li>
+        <li>HOME</li>
+        <li>AWAY</li>
+        <li>BOOST</li>
+        <li>FIREPLACE</li>
+        <li>EXTRA</li>
+    </ol>
+</script>

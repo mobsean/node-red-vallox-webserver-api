@@ -1,0 +1,337 @@
+[
+    {
+        "id": "c3c85fc4de0cbaff",
+        "type": "tab",
+        "label": "example: setProfile",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3f877eb709955943",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "HOME",
+        "payloadType": "str",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "aac423399eedea4a"
+            ]
+        ]
+    },
+    {
+        "id": "03774e156ef9c416",
+        "type": "comment",
+        "z": "c3c85fc4de0cbaff",
+        "name": "setProfile via input",
+        "info": " 1. Set the IP Adress of your local Vallox Webserver.\n 2. press inject\n 3. open debug to read the new current profile",
+        "x": 170,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "aac423399eedea4a",
+        "type": "setProfile",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "ip": "8c91699b4732d13c",
+        "profile": "default",
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "4020ba1464bf5c9b"
+            ]
+        ]
+    },
+    {
+        "id": "cb30500890cf9943",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "AWAY",
+        "payloadType": "str",
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "aac423399eedea4a"
+            ]
+        ]
+    },
+    {
+        "id": "ae3e835e97fa116a",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "BOOST",
+        "payloadType": "str",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "aac423399eedea4a"
+            ]
+        ]
+    },
+    {
+        "id": "4020ba1464bf5c9b",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "86b4a9bd531e5447",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 380,
+        "wires": [
+            [
+                "2f56a97bbe36929e"
+            ]
+        ]
+    },
+    {
+        "id": "2f56a97bbe36929e",
+        "type": "setProfile",
+        "z": "c3c85fc4de0cbaff",
+        "name": "setProfile: Home",
+        "ip": "8c91699b4732d13c",
+        "profile": "HOME",
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "277e982eceb1bcc6"
+            ]
+        ]
+    },
+    {
+        "id": "277e982eceb1bcc6",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "635f6fe5e9f47e90",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "a5cadfec2dc47337"
+            ]
+        ]
+    },
+    {
+        "id": "a5cadfec2dc47337",
+        "type": "setProfile",
+        "z": "c3c85fc4de0cbaff",
+        "name": "setProfile: Away",
+        "ip": "8c91699b4732d13c",
+        "profile": "AWAY",
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "7c80b6f65cc8751d"
+            ]
+        ]
+    },
+    {
+        "id": "7c80b6f65cc8751d",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1a2190028e236046",
+        "type": "comment",
+        "z": "c3c85fc4de0cbaff",
+        "name": "setProfile via setting",
+        "info": " 1. Set the IP Adress of your local Vallox Webserver.\n 2. press inject\n 3. open debug to read the new current profile",
+        "x": 170,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "34deb7012f0fc56d",
+        "type": "inject",
+        "z": "c3c85fc4de0cbaff",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "a2261267c0c76edd"
+            ]
+        ]
+    },
+    {
+        "id": "a2261267c0c76edd",
+        "type": "setProfile",
+        "z": "c3c85fc4de0cbaff",
+        "name": "setProfile: Boost",
+        "ip": "8c91699b4732d13c",
+        "profile": "BOOST",
+        "x": 360,
+        "y": 540,
+        "wires": [
+            [
+                "d7aeaf6d0a3e208a"
+            ]
+        ]
+    },
+    {
+        "id": "d7aeaf6d0a3e208a",
+        "type": "debug",
+        "z": "c3c85fc4de0cbaff",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "8c91699b4732d13c",
+        "type": "valloxApi",
+        "ip": "192.168.0.10"
+    }
+]
