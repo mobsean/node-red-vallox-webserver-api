@@ -8,15 +8,19 @@ This uses the build-in Vallox webserver to get and set properties of your HVAC.
 
 1. **get Profile**: Returns the current profile of the vallox unit.
 
-![example: getProfile](https://github.com/mobsean/node-red-vallox-webserver-api/raw/dev/documentation/getProfile.jpg)
+![example: getProfile](https://github.com/mobsean/node-red-vallox-webserver-api/raw/main/documentation/getProfile.jpg)
 
 2. **set Profile**: Sets the current vallox profile.
 
-![example: setProfile](https://github.com/mobsean/node-red-vallox-webserver-api/raw/dev/documentation/setProfile.jpg)
+![example: setProfile](https://github.com/mobsean/node-red-vallox-webserver-api/raw/main/documentation/setProfile.jpg)
 
 3. **get Temp**: Returns all current temperatures of the vallox unit.
 
-![example: getTemp](https://github.com/mobsean/node-red-vallox-webserver-api/raw/dev/documentation/getTemp.jpg)
+![example: getTemp](https://github.com/mobsean/node-red-vallox-webserver-api/raw/main/documentation/getTemp.jpg)
+
+4. **get Fanspeed**: Returns current fanspeeed of the vallox unit.
+
+![example: getFanspeed](https://github.com/mobsean/node-red-vallox-webserver-api/raw/main/documentation/getFanspeed.jpg)
 
 ## tested with
 
