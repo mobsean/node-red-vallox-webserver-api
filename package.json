@@ -1,6 +1,6 @@
 {
   "name": "@mobsean/node-red-vallox-webserver-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Connect your vallox HVAC unit with node-red over vallox webserver.",
   "engines": {
     "node": ">=14"
@@ -14,6 +14,7 @@
     "nodes": {
       "valloxApi": "nodes/valloxApi.js",
       "getTemp": "nodes/getTemp.js",
+      "getFanspeed": "nodes/getFanspeed.js",
       "getProfile": "nodes/getProfile.js",
       "setProfile": "nodes/setProfile.js"
     }

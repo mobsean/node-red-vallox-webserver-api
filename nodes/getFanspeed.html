@@ -1,0 +1,36 @@
+<script type="text/javascript">
+RED.nodes.registerType('getFanspeed', {
+  category: 'Vallox Api',
+  color: '#70c1ff',
+  defaults: {
+    name: { value: '' },
+    ip: { value: '', type: 'valloxApi' }
+  },
+  inputs: 1,
+  outputs: 2,
+  icon: 'file.svg',
+  label: function () {
+    return this.name || 'getFanspeed'
+  },
+  outputLabels: [
+    'A_CYC_FAN_SPEED'
+  ]
+})
+</script>
+
+<script type="text/html" data-template-name="getFanspeed">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name:</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <b>Vallox Webserver:</b>
+    <p></p>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-server"></i> IP:</label>
+        <input type="text" id="node-input-ip">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="getFanspeed">
+    <p>Returns current Fanspeed of the vallox unit.</p>
+</script>
