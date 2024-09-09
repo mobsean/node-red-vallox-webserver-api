@@ -13,7 +13,8 @@ RED.nodes.registerType('getFanspeed', {
     return this.name || 'getFanspeed'
   },
   outputLabels: [
-    'A_CYC_FAN_SPEED'
+    'A_CYC_FAN_SPEED / %',
+    'A_CYC_EXTR_FAN_SPEED / rpm'
   ]
 })
 </script>
@@ -33,4 +34,12 @@ RED.nodes.registerType('getFanspeed', {
 
 <script type="text/html" data-help-name="getFanspeed">
     <p>Returns current Fanspeed of the vallox unit.</p>
+    <ol>
+      <li>
+        A_CYC_FAN_SPEED is the current fanspeed in percent [%]',
+      </li>
+      <li>
+        A_CYC_EXTR_FAN_SPEED is the current fanspeed in rounds per minute [min^-1]
+      </li>
+    </ol>
 </script>
