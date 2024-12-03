@@ -16,7 +16,9 @@
       "getTemp": "nodes/getTemp.js",
       "getFanspeed": "nodes/getFanspeed.js",
       "getProfile": "nodes/getProfile.js",
-      "setProfile": "nodes/setProfile.js"
+      "setProfile": "nodes/setProfile.js",
+      "getMode": "nodes/getMode.js",
+      "setMode": "nodes/setMode.js"
     }
   },
   "keywords": [

@@ -1,0 +1,70 @@
+<script type="text/javascript">
+RED.nodes.registerType('setMode', {
+  category: 'Vallox Api',
+  color: '#ff7070',
+  defaults: {
+    name: { value: '' },
+    ip: { value: '', type: 'valloxApi' },
+    mode: { value: 'default' }
+  },
+  inputs: 1,
+  outputs: 1,
+  icon: 'file.svg',
+  label: function () {
+    return this.name || 'setMode'
+  },
+  outputLabels: [
+    'current mode'
+  ],
+  inputLabels: [
+    'NORMAL, OFF'
+  ]
+})
+</script>
+
+<script type="text/html" data-template-name="setMode">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name:</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-mode"><i class="fa fa-users"></i> setMode:</label>
+    <select id="node-input-mode">
+      <option value="default">msg.payload</option>
+      <option value="NORMAL">Normal (on)</option>
+      <option value="OFF">off</option>
+    </select> 
+  </div>
+    <b>Vallox Webserver:</b>
+    <p></p>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-server"></i> IP:</label>
+        <input type="text" id="node-input-ip" />
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="setMode">
+    <p>This node changes the current vallox mode.</p>
+    <dl>
+        <dt>setMode:</dt>
+            <dd>This changes the behavior of the setMode Node. Basically two different modes are possible:</dd>
+        <ol>
+            <li>
+                <dt>msg.payload</dt>
+                <dd>
+                    In this mode the incoming msg.payload is used to set the mode of the Vallox ventilating unit. 
+                </dd>
+            </li>
+            <li>
+                <dt>Choose a mode directly</dt>
+                    <dd>Set one of these to use a static mode on every incoming msg.payload.</dd>
+            </li>
+        </ol>
+    </dl>
+    <p><b>available profiles: </b></p>
+    <ul>
+        <li>NORMAL</li>
+        <li>OFF</li>
+    </ul>
+</script>
