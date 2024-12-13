@@ -1,19 +1,18 @@
 module.exports = function (RED) {
-  function getProfileNode (config) {
+  function getModeNode (config) {
     RED.nodes.createNode(this, config)
     const node = this
 
     const Vallox = require('@danielbayerlein/vallox-api')
-    const { ip } = RED.nodes.getNode(config.ip)
+    const { ip, modes } = RED.nodes.getNode(config.ip)
     const client = new Vallox({ ip, port: 80 })
 
     node.on('input', async (msg, send, done) => {
       try {
-        const profiles = client.PROFILES
-        const result = await client.getProfile()
-        const profile = Object.keys(profiles).find(key => profiles[key] === result)
+        const result = await client.fetchMetrics(['A_CYC_MODE'])
+        const mode = Object.keys(modes).find(key => modes[key] === result.A_CYC_MODE);
 
-        node.send({ payload: profile })
+        node.send({ payload: mode });
 
         node.status({ fill: 'green', shape: 'dot', text: 'connected' })
         if (done) {
@@ -26,5 +25,5 @@ module.exports = function (RED) {
       }
     })
   }
-  RED.nodes.registerType('getProfile', getProfileNode)
+  RED.nodes.registerType('getMode', getModeNode)
 }

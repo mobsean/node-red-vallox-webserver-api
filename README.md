@@ -22,9 +22,18 @@ This uses the build-in Vallox webserver to get and set properties of your HVAC.
 
 ![example: getFanspeed](https://github.com/mobsean/node-red-vallox-webserver-api/raw/main/documentation/getFanspeed.jpg)
 
+5. **get Mode**: Returns the current mode of the vallox unit.
+
+![example: getMode](https://github.com/mobsean/node-red-vallox-webserver-api/raw/main/documentation/getMode.png)
+
+6. **set Mode**: Sets the current vallox mode.
+
+![example: setMode](https://github.com/mobsean/node-red-vallox-webserver-api/raw/main/documentation/setMode.png)
+
 ## tested with
 
 - ValloPlus 240-E MV, Ver. 2.0.12
+- ValloPlus 350 MV, Ver. 2.0.24
 
 ## thanks to
 - [@danielbayerlein](https://github.com/danielbayerlein/vallox-api) for the vallox-api project

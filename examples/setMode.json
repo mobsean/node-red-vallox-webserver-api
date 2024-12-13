@@ -1,0 +1,97 @@
+[
+    {
+        "id": "0a421fa0c78d22c5",
+        "type": "setMode",
+        "z": "629977ac3e192bdc",
+        "name": "",
+        "ip": "8c91699b4732d13c",
+        "mode": "default",
+        "x": 820,
+        "y": 520,
+        "wires": [
+            [
+                "e573aae701ba40ff"
+            ]
+        ]
+    },
+    {
+        "id": "e573aae701ba40ff",
+        "type": "debug",
+        "z": "629977ac3e192bdc",
+        "name": "New Mode",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 970,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "966d71bab9d018f2",
+        "type": "inject",
+        "z": "629977ac3e192bdc",
+        "name": "OFF",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 670,
+        "y": 520,
+        "wires": [
+            [
+                "0a421fa0c78d22c5"
+            ]
+        ]
+    },
+    {
+        "id": "b5c9f6ea88694c2c",
+        "type": "inject",
+        "z": "629977ac3e192bdc",
+        "name": "NORMAL",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "NORMAL",
+        "payloadType": "str",
+        "x": 680,
+        "y": 480,
+        "wires": [
+            [
+                "0a421fa0c78d22c5"
+            ]
+        ]
+    },
+    {
+        "id": "8c91699b4732d13c",
+        "type": "valloxApi",
+        "ip": "192.168.0.10"
+    }
+]

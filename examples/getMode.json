@@ -1,0 +1,67 @@
+[
+    {
+        "id": "d9ab4fe9de489d9f",
+        "type": "getMode",
+        "z": "629977ac3e192bdc",
+        "name": "",
+        "ip": "8c91699b4732d13c",
+        "x": 820,
+        "y": 580,
+        "wires": [
+            [
+                "2e0d4c435f709238"
+            ]
+        ]
+    },
+    {
+        "id": "2e0d4c435f709238",
+        "type": "debug",
+        "z": "629977ac3e192bdc",
+        "name": "Current Mode",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 980,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "4fa34ccb9cbb8f08",
+        "type": "inject",
+        "z": "629977ac3e192bdc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 670,
+        "y": 580,
+        "wires": [
+            [
+                "d9ab4fe9de489d9f"
+            ]
+        ]
+    },
+    {
+        "id": "8c91699b4732d13c",
+        "type": "valloxApi",
+        "ip": "192.168.0.10"
+    }
+]
