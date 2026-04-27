@@ -11,7 +11,10 @@ module.exports = function (RED) {
       try {
         const metrics = await client.fetchMetrics([
           'A_CYC_FAN_SPEED',
-          'A_CYC_EXTR_FAN_SPEED'
+          'A_CYC_EXTR_FAN_SPEED',
+          'A_CYC_SUPP_FAN_SPEED',
+          'A_CYC_RH_VALUE',
+          'A_CYC_CO2_VALUE'
         ])
         const parsedMetrics = {}
         Object.keys(metrics).forEach((key) => {
@@ -30,7 +33,25 @@ module.exports = function (RED) {
           name: 'A_CYC_EXTR_FAN_SPEED'
         }
 
-        node.send([msg1, msg2])
+        const msg3 = {
+          payload: parsedMetrics.A_CYC_SUPP_FAN_SPEED,
+          unit: 'rpm',
+          name: 'A_CYC_SUPP_FAN_SPEED'
+        }
+
+        const msg4 = {
+          payload: parsedMetrics.A_CYC_RH_VALUE,
+          unit: '%',
+          name: 'A_CYC_RH_VALUE'
+        }
+
+        const msg5 = {
+          payload: parsedMetrics.A_CYC_CO2_VALUE,
+          unit: 'ppm',
+          name: 'A_CYC_CO2_VALUE'
+        }
+
+        node.send([msg1, msg2, msg3, msg4, msg5])
 
         node.status({ fill: 'green', shape: 'dot', text: 'connected' })
         if (done) {
