@@ -7,14 +7,17 @@ RED.nodes.registerType('getFanspeed', {
     ip: { value: '', type: 'valloxApi' }
   },
   inputs: 1,
-  outputs: 2,
+  outputs: 5,
   icon: 'file.svg',
   label: function () {
     return this.name || 'getFanspeed'
   },
   outputLabels: [
     'A_CYC_FAN_SPEED / %',
-    'A_CYC_EXTR_FAN_SPEED / rpm'
+    'A_CYC_EXTR_FAN_SPEED / rpm',
+    'A_CYC_SUPP_FAN_SPEED / rpm',
+    'A_CYC_RH_VALUE / %',
+    'A_CYC_CO2_VALUE / ppm'
   ]
 })
 </script>
@@ -39,7 +42,16 @@ RED.nodes.registerType('getFanspeed', {
         A_CYC_FAN_SPEED is the current fanspeed in percent [%]',
       </li>
       <li>
-        A_CYC_EXTR_FAN_SPEED is the current fanspeed in rounds per minute [min^-1]
+        A_CYC_EXTR_FAN_SPEED is the current extract (Abluft) fanspeed in rounds per minute [min^-1]
+      </li>
+      <li>
+        A_CYC_SUPP_FAN_SPEED is the current supply (Zuluft) fanspeed in rounds per minute [min^-1]
+      </li>
+      <li>
+        A_CYC_RH_VALUE is the current room humidity in percent [%]
+      </li>
+      <li>
+        A_CYC_CO2_VALUE is the current CO2 content in parts per million [ppm]
       </li>
     </ol>
 </script>
